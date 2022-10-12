@@ -7,8 +7,9 @@ const Container = styled.header`
   height: 70px;
   display: flex;
   align-items: center;
-  background: #ffffff;
-  // backdrop-filter: blur(5px);
+  color: ${(p) => p.theme.c};
+  background: transparent;
+  backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
 `;

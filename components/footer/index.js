@@ -2,14 +2,19 @@ import styled from "styled-components";
 
 const GrayLabel = styled.h6`
   font-size: 14px;
+  font-weight: 300;
+  color: ${(p) => p.theme.lc};
   span {
     font-weight: bold;
   }
   margin: 0;
+  margin-bottom: 5px;
 `;
 
 const CopyrightsLabel = styled.p`
   font-size: 16px;
+  color: ${(p) => p.theme.lc};
+  margin: 0;
 `;
 
 const FooterWrappper = styled.footer`

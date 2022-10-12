@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import ThemeButton from "./ThemeButton";
 import { useState } from "react";
+import { useThemeContext } from "../../contexts/theme";
 
 const Nav = styled.nav`
   display: flex;
@@ -34,7 +35,7 @@ const MenuButton = styled.button`
   background: transparent;
   padding: 3px;
   border-radius: 5px;
-  border: 3px solid #999999;
+  border: 3px solid ${(p) => p.theme.lc};
   margin-left: 10px;
   cursor: pointer;
   svg {
@@ -50,13 +51,13 @@ const MenuList = styled.ul`
   display: none;
   width: 250px;
   padding: 10px;
-  background: white;
+  background: ${(p) => p.theme.sbg};
   position: absolute;
   top: 50px;
   right: 0px;
   list-style: none;
   border-radius: 5px;
-  border: 2px solid #999999;
+  border: 2px solid ${(p) => p.theme.lc};
   li {
     margin: 0 0 10px 0 !important;
   }
@@ -86,6 +87,7 @@ const ButtonWrapper = styled.div`
 
 export default function Navbar({ toggleTheme }) {
   const [visible, setVisible] = useState(false);
+  let [theme] = useThemeContext();
   return (
     <Nav>
       <List>
@@ -112,7 +114,7 @@ export default function Navbar({ toggleTheme }) {
         <ThemeButton toggleTheme={toggleTheme} />
       </ButtonWrapper>
       <MenuButton onClick={() => setVisible((val) => !val)}>
-        <MenuIcon />
+        <MenuIcon color={theme === "light" ? "#24292f" : "#c9d1d9"} />
       </MenuButton>
       <MenuList visible={visible}>
         <ListItem>

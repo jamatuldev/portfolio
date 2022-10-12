@@ -3,7 +3,7 @@ import styled from "styled-components";
 import initializedCanvas from "./canvas";
 
 const Canvas = styled.canvas`
-  opacity: 0.8;
+  opacity: 1;
   position: fixed;
   top: 0;
   z-index: -100000;

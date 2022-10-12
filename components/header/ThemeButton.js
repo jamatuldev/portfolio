@@ -18,8 +18,12 @@ const Button = styled.button`
 `;
 
 export default function ThemeButton({ toggleTheme }) {
-  let [light, setLight] = useState(true);
   let [theme, setTheme] = useThemeContext();
+  let [light, setLight] = useState(theme === "light" ? true : false);
+  useEffect(() => {
+    setLight(theme === "light" ? true : false);
+  }, [theme]);
+
   const handleClick = () => {
     setLight((val) => !val);
     setTheme(theme === "light" ? "dark" : "light");
