@@ -7,6 +7,7 @@ const Canvas = styled.canvas`
   position: fixed;
   top: 0;
   z-index: -100000;
+  background: ${(p) => p.theme.bg};
 `;
 
 export default function Background() {

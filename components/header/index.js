@@ -29,12 +29,12 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header({ toggleTheme }) {
   return (
     <Container>
       <Wrapper>
         <Logo></Logo>
-        <Navbar />
+        <Navbar toggleTheme={toggleTheme} />
       </Wrapper>
     </Container>
   );

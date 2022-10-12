@@ -84,7 +84,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-export default function Navbar() {
+export default function Navbar({ toggleTheme }) {
   const [visible, setVisible] = useState(false);
   return (
     <Nav>
@@ -109,7 +109,7 @@ export default function Navbar() {
         </ListItem>
       </List>
       <ButtonWrapper>
-        <ThemeButton />
+        <ThemeButton toggleTheme={toggleTheme} />
       </ButtonWrapper>
       <MenuButton onClick={() => setVisible((val) => !val)}>
         <MenuIcon />

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useThemeContext } from "../../contexts/theme";
 
 const Button = styled.button`
   background: ${(props) => (props.light ? "#4f4db8" : "#fff75c")};
@@ -16,11 +17,15 @@ const Button = styled.button`
   }
 `;
 
-export default function ThemeButton() {
+export default function ThemeButton({ toggleTheme }) {
   let [light, setLight] = useState(true);
-
+  let [theme, setTheme] = useThemeContext();
+  const handleClick = () => {
+    setLight((val) => !val);
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   return (
-    <Button onClick={() => setLight((val) => !val)} light={light}>
+    <Button onClick={handleClick} light={light}>
       {light ? <MoonIcon color={"#ffffff"} /> : <SunIcon color={"#000000"} />}
     </Button>
   );
