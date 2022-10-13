@@ -7,7 +7,6 @@ import Header from "../header";
 
 export default function Layout({ children, toggleTheme }) {
   let [theme] = useThemeContext();
-  console.log(theme);
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <Background />

@@ -57,7 +57,7 @@ const MenuList = styled.ul`
   right: 0px;
   list-style: none;
   border-radius: 5px;
-  border: 2px solid ${(p) => p.theme.lc};
+  border: 2px solid ${(p) => p.theme.g};
   li {
     margin: 0 0 10px 0 !important;
   }
@@ -74,6 +74,12 @@ const Anchor = styled.a`
   font-size: 18px;
   padding: 10px 20px;
   font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media (max-width: 468px) {
+    font-size: 15px;
+  }
 `;
 
 const ButtonWrapper = styled.div`

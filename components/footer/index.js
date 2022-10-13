@@ -9,12 +9,24 @@ const GrayLabel = styled.h6`
   }
   margin: 0;
   margin-bottom: 5px;
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const CopyrightsLabel = styled.p`
   font-size: 16px;
   color: ${(p) => p.theme.lc};
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const FooterWrappper = styled.footer`
@@ -22,6 +34,11 @@ const FooterWrappper = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 768px) {
+    min-height: 5rem;
+    text-align: center;
+    padding: 10px;
+  }
 `;
 export default function Footer() {
   return (

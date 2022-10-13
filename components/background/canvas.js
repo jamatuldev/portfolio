@@ -37,10 +37,10 @@ export default function initializedCanvas() {
 
   let maxRadius = 20;
   let circleColors = [
-    "#0DAEBF",
-    "#7D80E8",
-    "#E83869",
-    "#56E89D",
+    // "#0DAEBF",
+    // "#7D80E8",
+    // "#E83869",
+    // "#56E89D",
     // "#56E89D",
     // "#FC55F5",
     // "#031A6B",
@@ -48,14 +48,16 @@ export default function initializedCanvas() {
     // "#087CA7",
     // "#004385",
     // "#05B2DC",
-    // "#874C62",
-    // "#C98474",
-    // "#F2D388",
-    // "#A7D2CB",
-    //   "#ff6900",
-    // "#f78da7","#00dddd","#7e61d7"
-    // ,"#ffcc49",
-    // "#00bb35"
+    "#874C62",
+    "#C98474",
+    "#F2D388",
+    "#A7D2CB",
+    "#ff6900",
+    // "#f78da7",
+    // "#00dddd",
+    // "#7e61d7",
+    // "#ffcc49",
+    // "#00bb35",
     // "#fff"
   ];
 
@@ -113,8 +115,8 @@ export default function initializedCanvas() {
     for (let i = 0; i < 1400; i++) {
       // let x = Math.random() * innerWidth;
       // let y = Math.random() * innerHeight;
-      let x = Math.random() * 105 + innerWidth / 2;
-      let y = Math.random() * 105 + innerHeight / 3;
+      let x = Math.random() * 205 + innerWidth / 2;
+      let y = Math.random() * 205 + innerHeight / 3;
       let dx = (Math.random() - 0.5) * 3;
       let dy = (Math.random() - 0.5) * 3;
       let radius = Math.random() + 1;
