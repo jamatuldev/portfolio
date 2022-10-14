@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useThemeContext } from "../../contexts/theme";
 
 const Button = styled(motion.button)`
-  background: ${(props) => (props.light ? "#4f4db8" : "#fff75c")};
+  background: ${(props) => (props.$light ? "#4f4db8" : "#fff75c")};
   padding: 5px;
   border-radius: 5px;
   border: none;
@@ -30,7 +30,7 @@ export default function ThemeButton({ toggleTheme }) {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return (
-    <Button onClick={handleClick} light={light}>
+    <Button onClick={handleClick} $light={light}>
       {
         <AnimatePresence>
           {light ? (
