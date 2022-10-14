@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import { useThemeContext } from "../../contexts/theme";
-import { darkTheme, lightTheme } from "../../ThemeConfig";
+import { darkTheme, lightTheme } from "../../themeConfig";
 import Background from "../background";
 import Footer from "../footer";
 import Header from "../header";
