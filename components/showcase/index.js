@@ -93,7 +93,7 @@ export default function Showcase() {
       <AvatarWrapper>
         <Avatar src={"/avatar.jfif"} alt="avatar" />
       </AvatarWrapper>
-      <Heading>Hey there, I'm Jamatul</Heading>
+      <Heading>Hey there, I&apos;m Jamatul</Heading>
       <SmHeading>Javascript and Typescript Developer</SmHeading>
       <SubHeading>I design and develop Modern Scalable Webapps</SubHeading>
       <Label>
