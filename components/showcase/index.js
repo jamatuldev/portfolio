@@ -15,6 +15,7 @@ const Heading = styled.h1`
   font-size: 42px;
   color: ${(p) => p.theme.p};
   font-family: monospace;
+  font-family: "Fredoka One";
   font-weight: 700;
 
   margin-top: 10px;
@@ -28,6 +29,7 @@ const Heading = styled.h1`
   }
 `;
 const SubHeading = styled.h2`
+  display: none;
   font-size: 32px;
   font-weight: 400;
   color: ${(p) => p.theme.lc};
@@ -58,11 +60,19 @@ const Label = styled.p`
   justify-content: center;
   border-radius: 5px;
   margin: 0;
+  width: 450px;
+  margin-top: 20px;
   @media (max-width: 768px) {
     font-size: 15px;
+    width: 410px;
   }
   @media (max-width: 468px) {
     font-size: 14px;
+    width: 365px;
+  }
+  @media (max-width: 431px) {
+    font-size: 14px;
+    width: 260px;
   }
 `;
 const AvatarWrapper = styled.div``;
@@ -100,7 +110,8 @@ export default function Showcase() {
       <SmHeading>Javascript and Typescript Developer</SmHeading>
       <SubHeading>I design and develop Modern Scalable Webapps</SubHeading>
       <Label>
-        Me 😊 An allrounder ,who can work with both frontend and backend
+        I like to think myself 😊 as An allrounder ,who can work with both
+        frontend and backend at same level.
       </Label>
     </ShowcaseWrapper>
   );
