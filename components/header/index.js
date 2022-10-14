@@ -29,6 +29,9 @@ const Wrapper = styled(motion.div)`
   @media (max-width: 760px) {
     width: 90%;
   }
+  @media (min-width: 1245px) {
+    width: 65%;
+  }
 `;
 
 export default function Header({ toggleTheme }) {

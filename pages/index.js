@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1999);
+    }, 1000);
   }, []);
   return (
     <div className={styles.container}>

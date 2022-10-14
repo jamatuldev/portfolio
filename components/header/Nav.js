@@ -103,7 +103,7 @@ export default function Navbar({ toggleTheme }) {
           </Link>
         </ListItem>
         <ListItem>
-          <Link href={"/about"} passHref>
+          <Link href={"/"} passHref>
             <Anchor>About</Anchor>
           </Link>
         </ListItem>
@@ -129,7 +129,7 @@ export default function Navbar({ toggleTheme }) {
           </Link>
         </ListItem>
         <ListItem>
-          <Link href={"/about"} passHref>
+          <Link href={"/"} passHref>
             <Anchor>About</Anchor>
           </Link>
         </ListItem>

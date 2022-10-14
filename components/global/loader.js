@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
+const colors = ["#0DAEBF", "#7D80E8", "#E83869", "#56E89D"];
 const CircleAnimation = keyframes`
 0%{
     top:60px;
@@ -55,7 +56,7 @@ const Circle = styled(motion.div)`
   }
   position: absolute;
   border-radius: 50%;
-  background-color: ${(p) => p.theme.p};
+  background-color: ${colors[0]};
   left: 15%;
   transform-origin: 50%;
   animation-name: ${CircleAnimation};
@@ -64,12 +65,12 @@ const Circle = styled(motion.div)`
   animation-direction: alternate;
   animation-timing-function: ease;
   &:nth-child(2) {
-    background-color: ${(p) => p.theme.s};
+    background-color: ${colors[1]};
     left: 45%;
     animation-delay: 0.2s;
   }
   &:nth-child(3) {
-    background-color: ${(p) => p.theme.t};
+    background-color: ${colors[2]};
     left: auto;
     right: 15%;
     animation-delay: 0.3s;

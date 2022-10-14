@@ -9,6 +9,7 @@ const Canvas = styled(motion.canvas)`
   top: 0;
   z-index: -100000;
   background: ${(p) => p.theme.bg};
+  transition: all 0.3s ease-in-out;
 `;
 
 export default function Background() {
