@@ -31,11 +31,11 @@ const Normal = styled.p`
   color: ${(p) => p.theme.lc};
   margin: 0;
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 17px;
   }
-  @media (max-width: 468px) {
-    font-size: 15px;
-  }
+  // @media (max-width: 468px) {
+  //   font-size: 15px;
+  // }
 `;
 
 const Button = styled.button`

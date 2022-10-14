@@ -43,10 +43,7 @@ const Paragraph = styled.p`
     height: 24px;
   }
   @media (max-width: 768px) {
-    font-size: 16px;
-  }
-  @media (max-width: 468px) {
-    font-size: 15px;
+    font-size: 17px;
   }
 `;
 

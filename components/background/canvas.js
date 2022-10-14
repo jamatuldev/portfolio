@@ -37,10 +37,10 @@ export default function initializedCanvas() {
 
   let maxRadius = 20;
   let circleColors = [
-    "#0DAEBF",
-    "#7D80E8",
-    "#E83869",
-    "#56E89D",
+    // "#0DAEBF",
+    // "#7D80E8",
+    // "#E83869",
+    // "#56E89D",
     // "#56E89D",
     // "#FC55F5",
     // "#031A6B",
@@ -58,7 +58,19 @@ export default function initializedCanvas() {
     // "#7e61d7",
     // "#ffcc49",
     // "#00bb35",
-    // "#fff"
+    // "#fff",
+    // "#70d6ff",
+    // "#ff70a6",
+    // "#ff9770",
+    // "#ffd670",
+    "#ffadad",
+    "#ffd6a5",
+    "#fdffb6",
+    "#caffbf",
+    "#9bf6ff",
+    "#a0c4ff",
+    "#ffc6ff",
+    "#bdb2ff",
   ];
 
   class Circle {
@@ -112,7 +124,7 @@ export default function initializedCanvas() {
   let initialCircles = [];
   function init() {
     initialCircles = [];
-    for (let i = 0; i < 1400; i++) {
+    for (let i = 0; i < innerWidth; i++) {
       let x = Math.random() * innerWidth;
       let y = Math.random() * innerHeight;
       // let x = Math.random() * 405 + innerWidth / 2 - 202;

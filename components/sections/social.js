@@ -26,7 +26,7 @@ const LinkTag = styled.a`
   }
   margin-bottom: 10px;
   @media (max-width: 468px) {
-    font-size: 16px;
+    font-size: 17px;
   }
 `;
 

@@ -18,11 +18,11 @@ const Paragraph = styled.p`
     color: ${(p) => p.theme.p};
   }
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 17px;
   }
-  @media (max-width: 468px) {
-    font-size: 15px;
-  }
+  // @media (max-width: 468px) {
+  //   font-size: 15px;
+  // }
 `;
 
 export default function Love() {

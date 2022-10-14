@@ -11,7 +11,7 @@ const Container = styled(motion.header)`
   color: ${(p) => p.theme.c};
   background: transparent;
   backdrop-filter: blur(5px);
-  position: sticky;
+  position: fixed;
   top: 0;
 `;
 const Wrapper = styled(motion.div)`

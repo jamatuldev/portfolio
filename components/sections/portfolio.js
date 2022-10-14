@@ -115,9 +115,9 @@ const CardDetails = styled(motion.p)`
   color: ${(p) => p.theme.lc};
   margin: 0;
 
-  @media (max-width: 768px) {
-    font-size: 15px;
-  }
+  // @media (max-width: 768px) {
+  //   font-size: 15px;
+  // }
 `;
 
 const cardVariant = {

@@ -7,14 +7,16 @@ const ShowcaseWrapper = styled(motion.div)`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: calc(100vh - 70px);
+  height: 100vh;
   @media (max-width: 768px) {
   }
 `;
 const Heading = styled.h1`
   font-size: 42px;
   color: ${(p) => p.theme.p};
-  font-weight: 500;
+  font-family: monospace;
+  font-weight: 700;
+
   margin-top: 10px;
   margin-bottom: 0px;
   @media (max-width: 768px) {
@@ -26,22 +28,23 @@ const Heading = styled.h1`
   }
 `;
 const SubHeading = styled.h2`
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
   color: ${(p) => p.theme.lc};
   margin: 0;
-  margin-top: 15px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 
   @media (max-width: 768px) {
-    font-size: 22px;
+    font-size: 24px;
   }
 `;
 const SmHeading = styled.h4`
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   color: ${(p) => p.theme.lc};
   margin: 0;
+  margin-top: 5px;
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -82,7 +85,7 @@ const Avatar = styled.img`
 export default function Showcase() {
   return (
     <ShowcaseWrapper
-      initial={{ opacity: 0, y: 300 }}
+      initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         ease: [0.6, 0.01, -0.05, 0.95],
