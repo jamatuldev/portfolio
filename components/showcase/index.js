@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const ShowcaseWrapper = styled.div`
+const ShowcaseWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +81,15 @@ const Avatar = styled.img`
 
 export default function Showcase() {
   return (
-    <ShowcaseWrapper>
+    <ShowcaseWrapper
+      initial={{ opacity: 0, y: 300 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: [0.6, 0.01, -0.05, 0.95],
+        delay: 1,
+        duration: 1,
+      }}
+    >
       <AvatarWrapper>
         <Avatar src={"/avatar.jfif"} alt="avatar" />
       </AvatarWrapper>

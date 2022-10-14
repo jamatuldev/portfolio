@@ -1,8 +1,11 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { HeadingSecondary } from "../global/heading";
 import { wrapper } from "./globalStyles";
+import { sectionVariant } from "./globalVariants";
+import useScrollAnimation from "./useScrollAnimation";
 
-const BioWrapper = styled.section`
+const BioWrapper = styled(motion.section)`
   ${wrapper}
 `;
 const Line = styled.div`
@@ -50,8 +53,14 @@ const Button = styled.button`
 `;
 
 export default function Bio() {
+  let [ref, control] = useScrollAnimation();
   return (
-    <BioWrapper>
+    <BioWrapper
+      variants={sectionVariant}
+      ref={ref}
+      initial="hidden"
+      animate={control}
+    >
       <HeadingSecondary>Bio</HeadingSecondary>
       <Line>
         <Bold>2000</Bold>

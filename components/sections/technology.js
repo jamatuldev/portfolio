@@ -1,8 +1,11 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { HeadingSecondary } from "../global/heading";
 import { wrapper } from "./globalStyles";
+import { sectionVariant } from "./globalVariants";
+import useScrollAnimation from "./useScrollAnimation";
 
-const TechnologyWrapper = styled.section`
+const TechnologyWrapper = styled(motion.section)`
   ${wrapper}
 `;
 
@@ -48,8 +51,14 @@ const Paragraph = styled.p`
 `;
 
 export default function Technology() {
+  let [ref, control] = useScrollAnimation();
   return (
-    <TechnologyWrapper>
+    <TechnologyWrapper
+      variants={sectionVariant}
+      ref={ref}
+      initial="hidden"
+      animate={control}
+    >
       <HeadingSecondary>Technology</HeadingSecondary>
       <Wrapper>
         <TextWrapper>

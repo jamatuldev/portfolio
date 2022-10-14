@@ -37,10 +37,10 @@ export default function initializedCanvas() {
 
   let maxRadius = 20;
   let circleColors = [
-    // "#0DAEBF",
-    // "#7D80E8",
-    // "#E83869",
-    // "#56E89D",
+    "#0DAEBF",
+    "#7D80E8",
+    "#E83869",
+    "#56E89D",
     // "#56E89D",
     // "#FC55F5",
     // "#031A6B",
@@ -48,11 +48,11 @@ export default function initializedCanvas() {
     // "#087CA7",
     // "#004385",
     // "#05B2DC",
-    "#874C62",
-    "#C98474",
-    "#F2D388",
-    "#A7D2CB",
-    "#ff6900",
+    // "#874C62",
+    // "#C98474",
+    // "#F2D388",
+    // "#A7D2CB",
+    // "#ff6900",
     // "#f78da7",
     // "#00dddd",
     // "#7e61d7",
@@ -74,7 +74,7 @@ export default function initializedCanvas() {
     }
     draw() {
       c.beginPath();
-      c.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+      c.arc(this.x, this.y, Math.abs(this.radius), 0, 2 * Math.PI, false);
       c.fillStyle = this.color;
       c.fill();
     }
@@ -113,10 +113,10 @@ export default function initializedCanvas() {
   function init() {
     initialCircles = [];
     for (let i = 0; i < 1400; i++) {
-      // let x = Math.random() * innerWidth;
-      // let y = Math.random() * innerHeight;
-      let x = Math.random() * 205 + innerWidth / 2;
-      let y = Math.random() * 205 + innerHeight / 3;
+      let x = Math.random() * innerWidth;
+      let y = Math.random() * innerHeight;
+      // let x = Math.random() * 405 + innerWidth / 2 - 202;
+      // let y = Math.random() * 405 + innerHeight / 2 - 202;
       let dx = (Math.random() - 0.5) * 3;
       let dy = (Math.random() - 0.5) * 3;
       let radius = Math.random() + 1;
@@ -135,5 +135,5 @@ export default function initializedCanvas() {
   init();
   setTimeout(() => {
     animate();
-  }, 2000);
+  }, 3000);
 }

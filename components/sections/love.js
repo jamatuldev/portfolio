@@ -1,8 +1,11 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { HeadingSecondary } from "../global/heading";
 import { wrapper } from "./globalStyles";
+import { sectionVariant } from "./globalVariants";
+import useScrollAnimation from "./useScrollAnimation";
 
-const LoveWrapper = styled.section`
+const LoveWrapper = styled(motion.section)`
   ${wrapper}
 `;
 
@@ -23,8 +26,14 @@ const Paragraph = styled.p`
 `;
 
 export default function Love() {
+  let [ref, control] = useScrollAnimation();
   return (
-    <LoveWrapper>
+    <LoveWrapper
+      variants={sectionVariant}
+      ref={ref}
+      initial="hidden"
+      animate={control}
+    >
       <HeadingSecondary>I ❤️</HeadingSecondary>
       <Paragraph>
         <span>Nature</span>, Music, Travelling, Problem Solving, Football,

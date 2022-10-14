@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Navbar from "./Nav";
 
-const Container = styled.header`
+const Container = styled(motion.header)`
   width: 100vw;
   height: 70px;
   display: flex;
@@ -13,7 +14,7 @@ const Container = styled.header`
   position: sticky;
   top: 0;
 `;
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +34,15 @@ const Wrapper = styled.div`
 export default function Header({ toggleTheme }) {
   return (
     <Container>
-      <Wrapper>
+      <Wrapper
+        initial={{ opacity: 0, marginTop: -150 }}
+        animate={{ opacity: 1, marginTop: 0 }}
+        transition={{
+          delay: 3,
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
         <Logo></Logo>
         <Navbar toggleTheme={toggleTheme} />
       </Wrapper>

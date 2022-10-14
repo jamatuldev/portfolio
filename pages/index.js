@@ -1,8 +1,7 @@
+import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image";
-import Background from "../components/background";
-import Footer from "../components/footer";
-import Header from "../components/header";
+import { useEffect, useState } from "react";
+import Loader from "../components/global/loader";
 import Bio from "../components/sections/bio";
 import Love from "../components/sections/love";
 import Social from "../components/sections/social";
@@ -12,6 +11,12 @@ import Showcase from "../components/showcase";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  let [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1999);
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -21,12 +26,23 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Showcase />
+        {/* <Showcase />
         <Work />
         <Technology />
         <Bio />
         <Love />
-        <Social />
+        <Social /> */}
+        <AnimatePresence>{loading && <Loader />} </AnimatePresence>
+        {!loading && (
+          <>
+            <Showcase />
+            <Work />
+            <Technology />
+            <Bio />
+            <Love />
+            <Social />
+          </>
+        )}
       </main>
     </div>
   );
