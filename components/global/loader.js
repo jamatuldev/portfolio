@@ -109,10 +109,12 @@ let circle = {
   initial: {
     opacity: 0,
     scale: 0.1,
+    top: 0,
   },
   animate: {
     opacity: 1,
     scale: 1.5,
+    top: 5,
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1,
@@ -121,6 +123,7 @@ let circle = {
   exit: {
     opacity: 0,
     scale: 0,
+    top: 0,
   },
 };
 

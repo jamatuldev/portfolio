@@ -10,6 +10,9 @@ export const lightTheme = {
   sbg: "#ffffff",
 };
 
+export const lightBG = "linear-gradient(to top, #ece9e6, #ffffff);";
+export const darkBG = "linear-gradient(to top, #000000, #2d3436);";
+
 export const darkTheme = {
   sbg: "#000000",
   bg: "linear-gradient(to top, #000000, #2d3436);",

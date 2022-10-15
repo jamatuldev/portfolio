@@ -98,6 +98,12 @@
   }
 }
 
+@media (max-width: 468px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {

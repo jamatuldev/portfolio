@@ -36,16 +36,16 @@ const Wrapper = styled(motion.div)`
 
 export default function Header({ toggleTheme }) {
   return (
-    <Container>
-      <Wrapper
-        initial={{ opacity: 0, marginTop: -150 }}
-        animate={{ opacity: 1, marginTop: 0 }}
-        transition={{
-          delay: 3,
-          duration: 1,
-          ease: "easeInOut",
-        }}
-      >
+    <Container
+      initial={{ opacity: 0, marginTop: -150 }}
+      animate={{ opacity: 1, marginTop: 0 }}
+      transition={{
+        delay: 4.6,
+        duration: 1,
+        ease: "easeInOut",
+      }}
+    >
+      <Wrapper>
         <Logo></Logo>
         <Navbar toggleTheme={toggleTheme} />
       </Wrapper>

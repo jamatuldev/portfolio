@@ -11,7 +11,11 @@ const ShowcaseWrapper = styled(motion.div)`
   @media (max-width: 768px) {
   }
 `;
-const Heading = styled.h1`
+
+const Wrapper = styled(motion.div)`
+  overflow: hidden;
+`;
+const Heading = styled(motion.h1)`
   font-size: 42px;
   color: ${(p) => p.theme.p};
   font-family: monospace;
@@ -41,7 +45,7 @@ const SubHeading = styled.h2`
     font-size: 24px;
   }
 `;
-const SmHeading = styled.h4`
+const SmHeading = styled(motion.h4)`
   font-size: 20px;
   font-weight: 500;
   color: ${(p) => p.theme.lc};
@@ -51,7 +55,7 @@ const SmHeading = styled.h4`
     font-size: 16px;
   }
 `;
-const Label = styled.p`
+const Label = styled(motion.p)`
   color: #ffffff;
   background: ${(p) => p.theme.p};
   padding: 10px 15px;
@@ -76,7 +80,7 @@ const Label = styled.p`
   }
 `;
 const AvatarWrapper = styled.div``;
-const Avatar = styled.img`
+const Avatar = styled(motion.img)`
   height: 160px;
   width: 160px;
   border-radius: 50%;
@@ -95,21 +99,60 @@ const Avatar = styled.img`
 export default function Showcase() {
   return (
     <ShowcaseWrapper
-      initial={{ opacity: 0, y: 0 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        ease: [0.6, 0.01, -0.05, 0.95],
-        delay: 1,
-        duration: 1,
-      }}
+    // initial={{ opacity: 0, y: 0 }}
+    // animate={{ opacity: 1, y: 0 }}
+    // transition={{
+    //   ease: [0.6, 0.01, -0.05, 0.95],
+    //   delay: 2,
+    //   duration: 1,
+    // }}
     >
       <AvatarWrapper>
-        <Avatar src={"/avatar.jfif"} alt="avatar" />
+        <Avatar
+          initial={{ opacity: 0, scale: 0, y: 0 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 0.7,
+          }}
+          src={"/avatar.jfif"}
+          alt="avatar"
+        />
       </AvatarWrapper>
-      <Heading>Hey there, I&apos;m Jamatul</Heading>
-      <SmHeading>Javascript and Typescript Developer</SmHeading>
+      <Wrapper>
+        <Heading
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{
+            delay: 1,
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 0.7,
+          }}
+        >
+          Hey there, I&apos;m Jamatul
+        </Heading>
+      </Wrapper>
+      <SmHeading
+        initial={{ opacity: 0, y: 5 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 2,
+          ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1,
+        }}
+      >
+        Javascript and Typescript Developer
+      </SmHeading>
       <SubHeading>I design and develop Modern Scalable Webapps</SubHeading>
-      <Label>
+      <Label
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 2.7,
+          ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1,
+        }}
+      >
         I like to think myself 😊 as An allrounder ,who can work with both
         frontend and backend at same level.
       </Label>

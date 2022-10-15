@@ -145,7 +145,8 @@ export default function initializedCanvas() {
   }
 
   init();
-  setTimeout(() => {
-    animate();
-  }, 3000);
+  animate();
+  // setTimeout(() => {
+  //   animate();
+  // }, 3000);
 }
