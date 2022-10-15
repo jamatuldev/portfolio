@@ -56,8 +56,8 @@ const SmHeading = styled(motion.h4)`
   }
 `;
 const Label = styled(motion.p)`
-  color: #ffffff;
-  background: ${(p) => p.theme.p};
+  color: ${(p) => p.theme.lc};
+  background: ${(p) => p.theme.tp};
   padding: 10px 15px;
   display: flex;
   align-items: center;

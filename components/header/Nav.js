@@ -51,7 +51,7 @@ const MenuList = styled.ul`
   display: none;
   width: 250px;
   padding: 10px;
-  background: ${(p) => p.theme.sbg};
+  background: ${(p) => p.theme.tp};
   position: absolute;
   top: 50px;
   right: 0px;

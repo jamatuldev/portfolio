@@ -9,6 +9,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   position: relative;
   z-index: -999999999;
+  background: black;
 }
 
 a {
