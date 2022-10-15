@@ -26,14 +26,9 @@ try {
 } catch (e) {}
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent;
-if (typeof window === undefined) {
-} else {
-  wheelEvent =
-    "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
-}
 
-console.log(typeof window);
+var wheelEvent =
+  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
 
 // call this to Disable
 export function disableScroll() {

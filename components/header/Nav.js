@@ -94,6 +94,10 @@ const ButtonWrapper = styled.div`
 export default function Navbar({ toggleTheme }) {
   const [visible, setVisible] = useState(false);
   let [theme] = useThemeContext();
+
+  const hideMenu = () => {
+    setVisible(false);
+  };
   return (
     <Nav>
       <List>
@@ -123,17 +127,17 @@ export default function Navbar({ toggleTheme }) {
         <MenuIcon color={theme === "light" ? "#24292f" : "#c9d1d9"} />
       </MenuButton>
       <MenuList visible={visible}>
-        <ListItem>
+        <ListItem onClick={hideMenu}>
           <Link href={"/works"} passHref>
             <Anchor>Works</Anchor>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem onClick={hideMenu}>
           <Link href={"/"} passHref>
             <Anchor>About</Anchor>
           </Link>
         </ListItem>
-        <ListItem>
+        <ListItem onClick={hideMenu}>
           <Link href={"/contact"} passHref>
             <Anchor>Contact</Anchor>
           </Link>

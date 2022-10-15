@@ -40,7 +40,7 @@ export default function Header({ toggleTheme }) {
       initial={{ opacity: 0, marginTop: -150 }}
       animate={{ opacity: 1, marginTop: 0 }}
       transition={{
-        delay: 4.6,
+        delay: 4.2,
         duration: 1,
         ease: "easeInOut",
       }}

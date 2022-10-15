@@ -109,9 +109,10 @@ export default function Showcase() {
     >
       <AvatarWrapper>
         <Avatar
-          initial={{ opacity: 0, scale: 0, y: 0 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{
+            delay: 0.7,
             ease: [0.6, 0.01, -0.05, 0.95],
             duration: 0.7,
           }}
@@ -132,23 +133,25 @@ export default function Showcase() {
           Hey there, I&apos;m Jamatul
         </Heading>
       </Wrapper>
-      <SmHeading
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 2,
-          ease: [0.6, 0.01, -0.05, 0.95],
-          duration: 1,
-        }}
-      >
-        Javascript and Typescript Developer
-      </SmHeading>
+      <Wrapper>
+        <SmHeading
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 1.7,
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 1,
+          }}
+        >
+          Javascript and Typescript Developer
+        </SmHeading>
+      </Wrapper>
       <SubHeading>I design and develop Modern Scalable Webapps</SubHeading>
       <Label
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 2.7,
+          delay: 2.4,
           ease: [0.6, 0.01, -0.05, 0.95],
           duration: 1,
         }}

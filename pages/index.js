@@ -9,7 +9,6 @@ import Technology from "../components/sections/technology";
 import Work from "../components/sections/work";
 import Showcase from "../components/showcase";
 import styles from "../styles/Home.module.css";
-import { disableScroll, enableScroll } from "../utils/scroll";
 
 export default function Home() {
   let [loading, setLoading] = useState(true);
@@ -19,12 +18,6 @@ export default function Home() {
     }, 1500);
   }, []);
 
-  useEffect(() => {
-    disableScroll();
-    setTimeout(() => {
-      enableScroll();
-    }, 6000);
-  }, []);
   return (
     <div className={styles.container}>
       <Head>

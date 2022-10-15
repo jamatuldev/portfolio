@@ -5,8 +5,8 @@ export const lightTheme = {
   lg: "#888E95",
   c: "#000000",
   p: "#3d96fd",
-  s: "#EEDE4A",
-  t: "#5A40F8",
+  s: "#fff75c",
+  t: "#817fe4",
   sbg: "#ffffff",
 };
 
@@ -21,6 +21,6 @@ export const darkTheme = {
   g: "#57606A",
   lg: "#888E95",
   p: "#3d96fd",
-  s: "#EEDE4A",
-  t: "#5A40F8",
+  s: "#fff75c",
+  t: "#817fe4",
 };

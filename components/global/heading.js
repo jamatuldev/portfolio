@@ -13,6 +13,6 @@ export const HeadingSecondary = styled.h2`
     font-size: 30px;
   }
   @media (max-width: 468px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import styled from "styled-components";
 import { HeadingSecondary } from "../global/heading";
 import { wrapper } from "./globalStyles";
@@ -38,18 +39,21 @@ const Normal = styled.p`
   // }
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   border: none;
   padding: 10px 20px;
   background: ${(p) => p.theme.t};
   color: #fff;
   font-size: 20px;
-  border-radius: 2px;
+  border-radius: 150px;
+  border: 3px solid ${(p) => p.theme.c};
   cursor: pointer;
   transition: all 0.1s ease-in;
   &:hover {
     background: ${(p) => p.theme.s};
   }
+  display: inline-block;
+  margin-top: 10px;
 `;
 
 export default function Bio() {
@@ -77,7 +81,9 @@ export default function Bio() {
         <Bold>2021 - Present</Bold>
         <Normal>Started Learning Web development and still learning 😁</Normal>
       </Line>
-      <Button>My Portfolio</Button>
+      <Link href="/works" passHref>
+        <Button>My Portfolio</Button>
+      </Link>
     </BioWrapper>
   );
 }

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useThemeContext } from "../../contexts/theme";
 
 const Button = styled(motion.button)`
-  background: ${(props) => (props.$light ? "#4f4db8" : "#fff75c")};
+  background: ${(props) => (props.$light ? props.theme.t : props.theme.s)};
   padding: 5px;
   border-radius: 5px;
   border: none;

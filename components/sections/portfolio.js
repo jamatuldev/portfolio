@@ -29,7 +29,15 @@ const PortfolioWrapper = styled(motion.section)`
 
 const Heading = styled(motion.h1)`
   font-size: 44px;
+  font-weight: 700;
   color: ${(p) => p.theme.c};
+  @media (max-width: 768px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 468px) {
+    font-size: 34px;
+  }
 `;
 
 const CardWrapper = styled(motion.div)`
