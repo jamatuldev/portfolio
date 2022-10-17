@@ -1,0 +1,37 @@
+[
+  {
+    "title": "This Portfolio",
+    "description": "My own portfolio to showcase my skills, beliefs, works etc.",
+    "thumbline": "projects/portfolio/thumbline.png",
+    "slug": "portfolio",
+    "html": "<img src='/projects/portfolio/img1.png' alt='preview img'/> <h1> Portfolio </h1> <p> This is my own portfolio which showcase my works , skills, beliefs and education.</p> <h3>Techs used in : </h3> <ul> <li> Next.js </li> <li> Styled-Components </li> <li> Framer-motion </li>  </ul>  <a href='https://portfolio-seven-omega-89.vercel.app/' target='_blank'>About me</a>  <img src='/projects/portfolio/img2.png' alt='preview img'/> <img src='/projects/portfolio/img1.png' alt='preview img' />"
+  },
+  {
+    "title": "Real eState Portal",
+    "description": "An online Real Estate Application , Allows user to find the best property around his area ",
+    "thumbline": "projects/realstate/thumbline.png",
+    "slug": "realstate",
+    "html": "<img src='/projects/realstate/img1.png' alt='preview img'/> <h1> Real E State Application that covers the area of property finding and listing </h1> <p> This project is an online portal that helps the user to find their dream property by a few clicks. Their are general users who can view search filter properties .There also agent user who can upload one or more properties which are validated by the organization. It provides a smooth UI to the user.</p> <h3> Features: </h3> <ol><li>An Advance search bar based on the location</li> <li> An easy and flexible filter for finding the properties based on their details </li> <li> An Beautiful Image Gallery and Image Preview which show the photos of the properties </li> <li> User Authentication and Authorization </li> </ol> <h3>Techs used in : </h3> <ul> <li> React </li> <li> Redux </li> <li> Node.js </li> <li> Express.js </li> <li> MongoDB </li> </ul> <h3> Technical Features : </h3> <ul><li> User Authentication Based on JWT</li> <li> An geocoding Api and rendering of map </li> <li>Advance Filter System </li> An Rest Api  <li>  </li>   </ul> <a href='https://realstatebd.herokuapp.com/' target='_blank'>Live here</a> <a href='https://github.com/jamatulfront/real-estate' target='_blank'>Github Link</a> <img src='/projects/realstate/img2.png' alt='preview img'/> <img src='/projects/realstate/img1.png' alt='preview img' />"
+  },
+  {
+    "title": "Wordo - Keep Track of Daily Vocabularies.",
+    "description": "Wordo provides a clean interface for the user to extract and keep track of their Daily Vocubularies. ",
+    "thumbline": "projects/wordo/thumbline.png",
+    "slug": "wordo",
+    "html": "<img src='/projects/wordo/img1.png' alt='preview img'/> <h1> Wordo </h1> <p> Wordo let you extract vocubularies from an article you have read. It's also give an simple colorful user interface to browse words based on the day they are inserted.</p> <h3>Techs used in : </h3> <ul> <li> React.js </li> <li> Styled-Components </li> <li> Framer-motion </li> <li> Node.js </li> <li> Express.js </li> </ul>  <a href='https://github.com/jamatulfront/wordo' target='_blank'>Github Link</a>  <img src='/projects/wordo/img1.png' alt='preview img'/> <img src='/projects/wordo/img2.png' alt='preview img' />"
+  },
+  {
+    "title": "Data Structures in Javascript",
+    "description": "A small library of data structures and algorithms which are implemented in Javascript.",
+    "thumbline": "projects/datastructuresandalgorithms/thumbline.png",
+    "slug": "datastructuresandalgorithms",
+    "html": " <h1>A Small Libary Data Structures and Algorithms in Javascript </h1> <p> I tried to implement popular Data Structures and Algorithms in Javascript.</p> <h3>Data Structures that are implemented : </h3> <ul> <li> Stack  </li> <li> Queue - General, Priority </li> <li> Linked List - Singly - Doubly </li> <li> Tree - Binary Tree , Binary Search Tree </li> <li> Heap - Binary Heap </li> <li>Graph</li></ul>  <a href='https://github.com/jamatulfront/Data-Structure-and-Algorithms' target='_blank'>Github Link</a>  <img src='/projects/datastructuresandalgorithms/thumbline.png' alt='preview img' />"
+  },
+  {
+    "title": "Pixilab - A landing page",
+    "description": "A landing page for a fictional Digital Orgainization that sells digital arts and digital stuffs.",
+    "thumbline": "projects/pixilab/img1.png",
+    "slug": "pixilab",
+    "html": " <h1>A Landing Page for a digital Company </h1> <p> It's  Landing page of an company who sells digital stuffs. The page has a lot of animation and a smooth starting animation.</p> <h3>This is created using : </h3> <ul> <li> Html  </li> <li> Css </li> <li> Javascript </li> </ul><a href='https://pixilabjamatul.netlify.app/' target='_blank'>The site is live here :</a>  <a href='https://github.com/jamatulfront/pixl-landing-page' target='_blank'>Github Link</a>  <img src='/projects/pixilab/img1.png' alt='preview img' /><img src='/projects/pixilab/img2.png' alt='preview img' />"
+  }
+]

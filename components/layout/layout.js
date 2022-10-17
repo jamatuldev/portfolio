@@ -13,7 +13,6 @@ export default function Layout({ children, toggleTheme }) {
     document.body.style.backgroundColor =
       theme === "dark" ? "#000000" : "#ffffff";
     setTimeout(() => {
-      document.body.style.overflow = "auto";
       setShowFooter(true);
     }, 6000);
   }, []);

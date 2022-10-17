@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { wrapper } from "./globalStyles";
+import data from "../.././data/projects.json";
+import { useRouter } from "next/router";
 
 const PortfolioWrapper = styled(motion.section)`
   width: 65%;
-  margin: 100px auto;
+  margin: 150px auto;
 
   @media (max-width: 1054px) {
     width: 75%;
@@ -43,7 +45,7 @@ const Heading = styled(motion.h1)`
 const CardWrapper = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 70px;
   @media (max-width: 805px) {
     gap: 60px;
   }
@@ -58,7 +60,7 @@ const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 280px;
   text-align: center;
   cursor: pointer;
   @media (max-width: 805px) {
@@ -79,10 +81,11 @@ const Card = styled(motion.div)`
 `;
 
 const CardImage = styled(motion.img)`
-  width: 300px;
-  height: 190px;
+  width: 280px;
+  height: 175px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 5px rgba(255, 255, 255, 0.3);
   @media (max-width: 805px) {
     width: 280px;
     height: 180px;
@@ -138,6 +141,10 @@ const cardVariant = {
 };
 
 export default function Portfolio() {
+  let router = useRouter();
+  let handleCardClick = (href) => {
+    router.push(href);
+  };
   return (
     <PortfolioWrapper>
       <Heading
@@ -148,30 +155,19 @@ export default function Portfolio() {
         Works
       </Heading>
       <CardWrapper>
-        <Card variants={cardVariant} initial="initial" animate="animate">
-          <CardImage src="/portfolio.png" alt="Portfolio Image" />
-          <CardTitle>Web Scraper</CardTitle>
-          <CardDetails>
-            The world is fictional about this app. World need to know more about
-            that.
-          </CardDetails>
-        </Card>
-        <Card variants={cardVariant} initial="initial" animate="animate">
-          <CardImage src="/portfolio.png" alt="Portfolio Image" />
-          <CardTitle>Web Scraper</CardTitle>
-          <CardDetails>
-            The world is fictional about this app. World need to know more about
-            that.
-          </CardDetails>
-        </Card>
-        <Card variants={cardVariant} initial="initial" animate="animate">
-          <CardImage src="/portfolio.png" alt="Portfolio Image" />
-          <CardTitle>Web Scraper</CardTitle>
-          <CardDetails>
-            The world is fictional about this app. World need to know more about
-            that.
-          </CardDetails>
-        </Card>
+        {data.map((project, i) => (
+          <Card
+            key={i}
+            variants={cardVariant}
+            initial="initial"
+            animate="animate"
+            onClick={() => handleCardClick(`/works/${project.slug}`)}
+          >
+            <CardImage src={project.thumbline} alt={project.title} />
+            <CardTitle>{project.title}</CardTitle>
+            <CardDetails>{project.description}</CardDetails>
+          </Card>
+        ))}
       </CardWrapper>
     </PortfolioWrapper>
   );
