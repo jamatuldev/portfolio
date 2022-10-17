@@ -140,7 +140,7 @@ const cardVariant = {
   },
 };
 
-export default function Portfolio() {
+export default function Portfolio({ projects }) {
   let router = useRouter();
   let handleCardClick = (href) => {
     router.push(href);
@@ -155,7 +155,7 @@ export default function Portfolio() {
         Works
       </Heading>
       <CardWrapper>
-        {data.map((project, i) => (
+        {projects.map((project, i) => (
           <Card
             key={i}
             variants={cardVariant}

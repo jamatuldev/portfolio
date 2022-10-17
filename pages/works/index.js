@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "../../components/global/loader";
 import Portfolio from "../../components/sections/portfolio";
-
+import data from "../../data/projects.json";
 const Wrapper = styled.div`
   min-height: calc(100vh - 70px);
   width: 100vw;
 `;
 
-export default function Works() {
+export default function Works({ projects }) {
   let [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -30,11 +30,16 @@ export default function Works() {
         {!loading && (
           <>
             <Wrapper>
-              <Portfolio />
+              <Portfolio projects={projects} />
             </Wrapper>
           </>
         )}
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const projects = data;
+  return { props: { projects } };
 }

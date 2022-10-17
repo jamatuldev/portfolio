@@ -55,23 +55,13 @@ const ContentWrapper = styled.div`
   }
 `;
 
-export default function Works() {
+export default function Works({ content }) {
   let [loading, setLoading] = useState(true);
-  let [content, setContent] = useState("");
-  const router = useRouter();
-  const { pid } = router.query;
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 1500);
   }, []);
-
-  useEffect(() => {
-    let projectData = data.filter((p) => p.slug == pid);
-    let htmlContent = projectData.length !== 0 ? projectData[0].html : "n";
-    setContent(htmlContent);
-  }, [pid, content]);
 
   return (
     <div>
@@ -87,7 +77,7 @@ export default function Works() {
           <>
             <Wrapper>
               <ContentWrapper>
-                {content === "n" ? (
+                {content === "" ? (
                   <h1>Sorry nothing found !</h1>
                 ) : (
                   ReactHtmlParser(content)
@@ -99,4 +89,17 @@ export default function Works() {
       </main>
     </div>
   );
+}
+
+export async function getStaticPaths() {
+  const projects = data;
+  const paths = projects.map((project) => ({
+    params: { pid: project.slug },
+  }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const content = data.filter((p) => p.slug == params.pid)[0].html;
+  return { props: { content } };
 }
