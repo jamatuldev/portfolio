@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import Image from "next/image";
 
 const ShowcaseWrapper = styled(motion.div)`
   display: flex;
@@ -79,15 +80,13 @@ const Label = styled(motion.p)`
     width: 260px;
   }
 `;
-const AvatarWrapper = styled.div`
-  backgroud: gray;
-`;
+const AvatarWrapper = styled.div``;
 const Avatar = styled(motion.img)`
   height: 160px;
   width: 160px;
-  border-radius: 50%;
   object-fit: cover;
   border: 5px solid ${(p) => p.theme.lc};
+  border-radius: 50%;
   @media (max-width: 768px) {
     height: 140px;
     width: 140px;
@@ -118,7 +117,7 @@ export default function Showcase() {
             ease: [0.6, 0.01, -0.05, 0.95],
             duration: 0.7,
           }}
-          src={"/avatar.jpeg"}
+          src="/avatar.jpeg"
           alt="avatar"
         />
       </AvatarWrapper>
@@ -145,7 +144,7 @@ export default function Showcase() {
             duration: 1,
           }}
         >
-          Javascript and Typescript Developer
+          MERN FullStack Developer
         </SmHeading>
       </Wrapper>
       <SubHeading>I design and develop Modern Scalable Webapps</SubHeading>

@@ -44,7 +44,7 @@ export default function Work() {
         <span>
           So far i have been making projects for fun or the purpose of my
           university syllabus.{" "}
-        </span>
+        </span>{" "}
       </Paragraph>
     </WorkContainer>
   );
