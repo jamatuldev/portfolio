@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "../../components/global/loader";
 import ReactHtmlParser from "react-html-parser";
-import Portfolio from "../../components/sections/portfolio";
 import data from "../../data/projects.json";
 import { wrapper } from "../../components/sections/globalStyles";
 const Wrapper = styled.div`
@@ -15,6 +14,7 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   ${wrapper}
+  opacity: ${(p) => (p.$loading ? 0 : 1)};
   margin-top: 150px;
   img {
     width: 100%;
@@ -60,8 +60,8 @@ export default function Works({ content }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
-  }, []);
+    }, 4500);
+  }, [loading]);
 
   return (
     <div>
@@ -72,11 +72,24 @@ export default function Works({ content }) {
       </Head>
 
       <main>
-        <AnimatePresence>{loading && <Loader />} </AnimatePresence>
+        <AnimatePresence>
+          {loading && (
+            <>
+              <Loader />
+              <ContentWrapper $loading={loading}>
+                {content === "" ? (
+                  <h1>Sorry nothing found !</h1>
+                ) : (
+                  ReactHtmlParser(content)
+                )}
+              </ContentWrapper>
+            </>
+          )}{" "}
+        </AnimatePresence>
         {!loading && (
           <>
             <Wrapper>
-              <ContentWrapper>
+              <ContentWrapper $loading={loading}>
                 {content === "" ? (
                   <h1>Sorry nothing found !</h1>
                 ) : (

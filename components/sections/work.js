@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import styled from "styled-components";
 import { HeadingSecondary } from "../global/heading";
 import { wrapper } from "./globalStyles";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 import useScrollAnimation from "./useScrollAnimation";
 import { sectionVariant } from "./globalVariants";
 
