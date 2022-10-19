@@ -8,7 +8,7 @@ export const lightTheme = {
   s: "#fff75c",
   t: "#817fe4",
   sbg: "#000000",
-  tp: "#aaaaaa3b",
+  tp: "#ffffffba",
 };
 
 export const lightBG = "linear-gradient(to top, #ece9e6, #ffffff);";
@@ -24,5 +24,5 @@ export const darkTheme = {
   p: "#3dc4fd",
   s: "#fff75c",
   t: "#817fe4",
-  tp: "#4affeb26",
+  tp: "#000000d1",
 };

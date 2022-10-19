@@ -139,7 +139,7 @@ export default function initializedCanvas() {
   function animate() {
     c.clearRect(0, 0, innerWidth, innerHeight);
     requestAnimationFrame(animate);
-    for (let i = 0; i < initialCircles.length; i++) {
+    for (let i = 0; i < Math.floor(initialCircles.length / 2); i++) {
       initialCircles[i].update();
     }
   }

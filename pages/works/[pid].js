@@ -60,7 +60,7 @@ export default function Works({ content }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4500);
+    }, 1000);
   }, [loading]);
 
   return (

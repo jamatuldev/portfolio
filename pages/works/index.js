@@ -6,6 +6,7 @@ import Loader from "../../components/global/loader";
 import Portfolio from "../../components/sections/portfolio";
 import data from "../../data/projects.json";
 const Wrapper = styled.div`
+  opacity: ${(p) => (p.$loading ? 0 : 1)};
   min-height: calc(100vh - 70px);
   width: 100vw;
 `;
@@ -15,7 +16,7 @@ export default function Works({ projects }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1000);
   }, []);
   return (
     <div>
@@ -26,10 +27,17 @@ export default function Works({ projects }) {
       </Head>
 
       <main>
-        <AnimatePresence>{loading && <Loader />} </AnimatePresence>
+        <AnimatePresence>
+          {loading && (
+            <>
+              <Loader />
+              <Portfolio projects={projects} />
+            </>
+          )}{" "}
+        </AnimatePresence>
         {!loading && (
           <>
-            <Wrapper>
+            <Wrapper $loading={loading}>
               <Portfolio projects={projects} />
             </Wrapper>
           </>
